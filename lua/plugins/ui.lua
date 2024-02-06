@@ -1,8 +1,16 @@
 return {
+  -- add gruvbox
+  { "ellisonleao/gruvbox.nvim" },
+  { "tanvirtin/monokai.nvim",
+    priority = 1000,
+    opts = {
+      colorscheme = "monokai_pro",
+    },
+  },
   {
     "folke/tokyonight.nvim",
     lazy = false,
-    priority = 1000,
+    priority = 1,
     opts = {},
     require("tokyonight").setup({
       -- your configuration comes here
