@@ -16,7 +16,7 @@ return {
           },
         },
         VisualNOS = {
-          bg = palette.base3,
+          bg = palette.grey,
         },
         colorscheme = "monokai_pro",
       }
