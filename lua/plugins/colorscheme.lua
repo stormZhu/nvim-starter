@@ -1,25 +1,29 @@
 return {
   -- add gruvbox
   { "ellisonleao/gruvbox.nvim" },
-  { 
+  {
     "tanvirtin/monokai.nvim",
-    opts = function()
+    config = function()    
       local palette = require("monokai").pro
-
-      return {
-        palette = {
-          pink = "#e32078",
-        },
+      palette.aqua = '#66d9ef'   -- 修改一下pro的蓝色 
+      require("monokai").setup({
+        palette = palette,
         custom_hlgroups = {
-          Visual = {
-            bg = palette.grey,
+            Visual = {
+              bg = palette.grey,
+            },
+            VisualNOS = {
+              bg = palette.grey,
+            },
           },
-        },
-        VisualNOS = {
-          bg = palette.grey,
-        },
-        colorscheme = "monokai_pro",
-      }
+        }
+      )
     end,
   },
+  -- {
+  --   "LazyVim/LazyVim",
+  --   opts = {
+  --     colorscheme = "monokai_pro",
+  --   },
+  -- },
 }
