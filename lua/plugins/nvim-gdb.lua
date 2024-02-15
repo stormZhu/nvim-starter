@@ -41,7 +41,7 @@ return {
       end
 
       if t == "gdb" then
-        cmd = ":GdbStart gdb -q" .. exec_file
+        cmd = ":GdbStart gdb -q " .. exec_file
       elseif t == "lldb" then
         cmd = ":GdbStartLLDB lldb " .. exec_file
       elseif t == "rr" then
