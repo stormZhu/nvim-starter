@@ -1,11 +1,29 @@
+local Util = require("lazyvim.util")
 return {
   {
     "telescope.nvim",
     dependencies = {
       "nvim-telescope/telescope-file-browser.nvim",
+      {
+        "nvim-telescope/telescope-live-grep-args.nvim",
+        version = "^1.0.0",
+        config = function()
+          Util.on_load("telescope.nvim", function()
+            require("telescope").load_extension("live_grep_args")  --  -F搜索，就可以不用转译了，注意空格要加双引号，所有可以无脑加一个双引号或者单引号,类似 -F 'main() { 右边可以不加～
+          end)
+        end,
+      },
+    },
+    keys = {
+      {
+        "<leader>/",
+        ":lua require('telescope').extensions.live_grep_args.live_grep_args()<CR>",
+        desc = "Grep (root dir)",
+      },
     },
     opts = function(_, opts)
       local actions = require("telescope.actions")
+      local lga_actions = require("telescope-live-grep-args.actions")
       opts.defaults.mappings.i = vim.tbl_extend("force", opts.defaults.mappings.i, {
         ["<C-n>"] = actions.cycle_history_next,
         ["<C-p>"] = actions.cycle_history_prev,
@@ -68,6 +86,23 @@ return {
 
         ["?"] = actions.which_key,
       })
+      -- local lga_actions = require("telescope-live-grep-args.actions")
+      -- if opts.extensions == nil then
+      --   opts.extensions = {}
+      -- elseif endopts.extensions.live_grep_args == nil then
+      --   opts.extensions.live_grep_args = {}
+      -- else
+      --   opts.extensions.live_grep_args = vim.tbl_extend("force", opts.extensions.live_grep_args, {
+      --     auto_quoting = false, -- enable/disable auto-quoting
+      --     -- define mappings, e.g.
+      --     mappings = { -- extend mappings
+      --       i = {
+      --         ["<C-t>"] = lga_actions.quote_prompt(),
+      --         ["<C-i>"] = lga_actions.quote_prompt({ postfix = " --iglob " }),
+      --       },
+      --     },
+      --   })
+      -- end
     end,
   },
 }
