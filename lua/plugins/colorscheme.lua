@@ -11,9 +11,11 @@ return {
         custom_hlgroups = {
             Visual = {
               bg = palette.grey,
+              fg = palette.white,
             },
             VisualNOS = {
               bg = palette.grey,
+              fg = palette.white,
             },
           },
         }
