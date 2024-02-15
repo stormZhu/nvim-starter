@@ -10,12 +10,10 @@ return {
         palette = palette,
         custom_hlgroups = {
           Visual = {
-            bg = palette.grey,
-            fg = palette.white,
+            bg = palette.base5,
           },
           VisualNOS = {
-            bg = palette.grey,
-            fg = palette.white,
+            bg = palette.base5,
           },
           CursorLine = {
             bg = palette.base4,
