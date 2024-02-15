@@ -13,7 +13,7 @@ return {
         \ 'key_eval':       '<f9>',
       \ }
     ]])
-    local GdbSessionInit = function()
+    GdbSessionInit = function()
       local utils = require("config.utils")
       if utils.exists(".bps.txt") then
         vim.defer_fn(function()
@@ -21,13 +21,13 @@ return {
         end, 300)
       end
     end
-    local StartGdbLaunch = function()
+    StartGdbLaunch = function()
       -- start gdb sessoin
       local exec_file = vim.fn.input("Path to executable: ", vim.fn.getcwd() .. "/", "file")
       vim.api.nvim_command(":GdbStart gdb -q " .. exec_file)
       vim.api.nvim_command("NvimTreeClose")
     end
-    local StartSession = function(t, way)
+    StartSession = function(t, way)
       way = way or "launch"
       local dap = require("dap")
       local cmd, exec_file
@@ -52,7 +52,7 @@ return {
       vim.api.nvim_command(cmd)
     end
     
-    local CreateWatch = function()
+    CreateWatch = function()
       local watch_arg = vim.fn.input("Watch cmd: ")
       vim.api.nvim_command(":GdbCreateWatch " .. watch_arg)
     end
