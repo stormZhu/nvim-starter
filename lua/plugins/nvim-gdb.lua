@@ -27,46 +27,46 @@ return {
       vim.api.nvim_command(":GdbStart gdb -q " .. exec_file)
       vim.api.nvim_command("NvimTreeClose")
     end
-    -- StartSession = function(t, way)
-    --   local dap = require("dap")
-    --   local cmd, exec_file
-    --   if way == "launch" then
-    --     exec_file = vim.fn.input("Path to executable: ", vim.fn.getcwd() .. "/", "file")
-    --   elseif way == "attach" then
-    --     exec_file = "" -- TODO: pick pid
-    --   end
-    --
-    --   if t == "gdb" then
-    --     cmd = ":GdbStartLLDB gdb " .. exec_file
-    --   elseif t == "lldb" then
-    --     cmd = ":GdbStartLLDB lldb " .. exec_file
-    --   elseif t == "rr" then
-    --     cmd = ":GdbStartRR " .. exec_file
-    --   elseif t == "pdb" then
-    --     cmd = ":GdbStartPDB python -m pdb " .. exec_file
-    --   elseif t == "bashdb" then
-    --     cmd = ":GdbStartBashDB bashdb " .. exec_file
-    --   end
-    --   vim.api.nvim_command("Neotree close")
-    --   vim.api.nvim_command(cmd)
-    -- end
-    --
-    StartSession = function(t)
-      local cmd
-      if t == "gdb" then
-        cmd = ":GdbStartLLDB gdb "
-      elseif t == "lldb" then
-        cmd = ":GdbStartLLDB lldb "
-      elseif t == "rr" then
-        cmd = ":GdbStartRR "
-      elseif t == "pdb" then
-        cmd = ":GdbStartPDB python -m pdb "
-      elseif t == "bashdb" then
-        cmd = ":GdbStartBashDB bashdb "
+    StartSession = function(t, way)
+      local dap = require("dap")
+      local cmd, exec_file
+      if way == "launch" then
+        exec_file = vim.fn.input("Path to executable: ", vim.fn.getcwd() .. "/", "file")
+      elseif way == "attach" then
+        exec_file = "" -- TODO: pick pid
       end
-      vim.api.nvim_command("Neotree close")   -- 关闭目录树
+
+      if t == "gdb" then
+        cmd = ":GdbStartLLDB gdb " .. exec_file
+      elseif t == "lldb" then
+        cmd = ":GdbStartLLDB lldb " .. exec_file
+      elseif t == "rr" then
+        cmd = ":GdbStartRR " .. exec_file
+      elseif t == "pdb" then
+        cmd = ":GdbStartPDB python -m pdb " .. exec_file
+      elseif t == "bashdb" then
+        cmd = ":GdbStartBashDB bashdb " .. exec_file
+      end
+      vim.api.nvim_command("Neotree close")
       vim.api.nvim_command(cmd)
     end
+    --
+    -- StartSession = function(t)
+    --   local cmd
+    --   if t == "gdb" then
+    --     cmd = ":GdbStartLLDB gdb "
+    --   elseif t == "lldb" then
+    --     cmd = ":GdbStartLLDB lldb "
+    --   elseif t == "rr" then
+    --     cmd = ":GdbStartRR "
+    --   elseif t == "pdb" then
+    --     cmd = ":GdbStartPDB python -m pdb "
+    --   elseif t == "bashdb" then
+    --     cmd = ":GdbStartBashDB bashdb "
+    --   end
+    --   vim.api.nvim_command("Neotree close")   -- 关闭目录树
+    --   vim.api.nvim_command(cmd)
+    -- end
     CreateWatch = function()
       local watch_arg = vim.fn.input("Watch cmd: ")
       vim.api.nvim_command(":GdbCreateWatch " .. watch_arg)
