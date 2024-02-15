@@ -34,11 +34,14 @@ return {
       if way == "launch" then
         exec_file = vim.fn.input("Path to executable: ", vim.fn.getcwd() .. "/", "file")
       elseif way == "attach" then
-        exec_file = "-p " .. vim.fn.input("Set pid: ") -- TODO: pick pid
+        pid = vim.fn.input("Set pid: ")  -- TODO: pick pid
+        if pid != "" then:
+          exec_file = "-p " .. pid 
+        end
       end
 
       if t == "gdb" then
-        cmd = ":GdbStartLLDB gdb " .. exec_file
+        cmd = ":GdbStart gdb " .. exec_file
       elseif t == "lldb" then
         cmd = ":GdbStartLLDB lldb " .. exec_file
       elseif t == "rr" then
