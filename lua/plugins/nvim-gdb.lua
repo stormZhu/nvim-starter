@@ -35,7 +35,7 @@ return {
         exec_file = vim.fn.input("Path to executable: ", vim.fn.getcwd() .. "/", "file")
       elseif way == "attach" then
         pid = vim.fn.input("Set pid: ")  -- TODO: pick pid
-        if pid != "" then
+        if pid ~= "" then
           exec_file = "-p " .. pid 
         end
       end
