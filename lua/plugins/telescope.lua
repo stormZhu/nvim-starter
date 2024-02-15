@@ -3,13 +3,27 @@ return {
   {
     "telescope.nvim",
     dependencies = {
-      "nvim-telescope/telescope-file-browser.nvim",
+      {
+        "nvim-telescope/telescope-file-browser.nvim",
+        keys = {
+          {
+            "<leader>fe",
+            ":Telescope file_browser<CR>",
+            desc = "Telescope Explorer (root dir)",
+          },
+          {
+            "<leader>fE",
+            ":Telescope file_browser path=%:p:h select_buffer=true<CR>",
+            desc = "Telescope Explorer (cwd)",
+          },
+        },
+      },
       {
         "nvim-telescope/telescope-live-grep-args.nvim",
         version = "^1.0.0",
         config = function()
           Util.on_load("telescope.nvim", function()
-            require("telescope").load_extension("live_grep_args")  --  -F搜索，就可以不用转译了，注意空格要加双引号，所有可以无脑加一个双引号或者单引号,类似 -F 'main() { 右边可以不加～
+            require("telescope").load_extension("live_grep_args") --  -F搜索，就可以不用转译了，注意空格要加双引号，所有可以无脑加一个双引号或者单引号,类似 -F 'main() { 右边可以不加～
           end)
         end,
       },
