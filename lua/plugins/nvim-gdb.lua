@@ -13,7 +13,7 @@ return {
         \ 'key_eval':       '<f9>',
       \ }
     ]])
-    GdbSessionInit = function()
+    local GdbSessionInit = function()
       local utils = require("config.utils")
       if utils.exists(".bps.txt") then
         vim.defer_fn(function()
@@ -21,13 +21,13 @@ return {
         end, 300)
       end
     end
-    StartGdbLaunch = function()
+    local StartGdbLaunch = function()
       -- start gdb sessoin
       local exec_file = vim.fn.input("Path to executable: ", vim.fn.getcwd() .. "/", "file")
       vim.api.nvim_command(":GdbStart gdb -q " .. exec_file)
       vim.api.nvim_command("NvimTreeClose")
     end
-    StartSession = function(t, way)
+    local StartSession = function(t, way)
       way = way or "launch"
       local dap = require("dap")
       local cmd, exec_file
@@ -52,7 +52,7 @@ return {
       vim.api.nvim_command(cmd)
     end
     
-    CreateWatch = function()
+    local CreateWatch = function()
       local watch_arg = vim.fn.input("Watch cmd: ")
       vim.api.nvim_command(":GdbCreateWatch " .. watch_arg)
     end
@@ -60,7 +60,7 @@ return {
     vim.api.nvim_set_keymap("n", ";dr", '<cmd>lua StartSession("rr")<cr>', { noremap = true, desc = "rr launch" })
     -- launch
     vim.api.nvim_set_keymap("n", ";dg", '<cmd>lua StartSession("gdb")<cr>', { noremap = true, desc = "gdb launch" })
-    im.api.nvim_set_keymap("n", ";dl", '<cmd>lua StartSession("lldb")<cr>', { noremap = true, desc = "lldb launch" })
+    vim.api.nvim_set_keymap("n", ";dl", '<cmd>lua StartSession("lldb")<cr>', { noremap = true, desc = "lldb launch" })
     -- attach
     vim.api.nvim_set_keymap("n", ";da", '<cmd>lua StartSession("gdb", "attach")<cr>', { noremap = true, desc = "gdb attach" })
     vim.api.nvim_set_keymap("n", ";dd", '<cmd>lua StartSession("lldb", "attach")<cr>', { noremap = true, desc = "lldb attach" })
