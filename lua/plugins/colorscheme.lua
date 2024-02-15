@@ -18,6 +18,10 @@ return {
           CursorLine = {
             bg = palette.base4,
           },
+          Comment = {
+            fg = palette.base7,  -- 注释亮一点
+            style = "italic",
+          },
         },
       })
     end,
