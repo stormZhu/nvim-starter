@@ -26,4 +26,7 @@ return {
       false,
     },
   },
+  opts = function(_, opts)
+    opts.window.width = 30  --  默认40太宽了
+  end,
 }
