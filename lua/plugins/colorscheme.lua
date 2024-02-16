@@ -36,12 +36,15 @@ return {
     config = function()
       local everforest = require("everforest")
       everforest.setup({
-        background = "medium",
-        transparent_background_level = 0.05, 
+        background = "hard",
+        transparent_background_level = 0.05,
         italics = true,
         disable_italic_comments = false,
+        colours_override = function(palette) end,
         on_highlights = function(hl, palette)
-          hl.CurrentWord = { underline = true, bold = true }   -- 加下划线比较清楚
+          hl.CurrentWord = { underline = true, bold = true }
+          local myblue = "#23c8db"   -- 蓝色浅一点
+          hl.InfoText = { fg = myblue, bg = myblue, sp = myblue, bold = true }
         end,
       })
       everforest.load()
@@ -50,7 +53,7 @@ return {
   -- {
   --   "LazyVim/LazyVim",
   --   opts = {
-  --     colorscheme = "everforest",
+  --     colorscheme = "everforest",  -- neo-tree展示不好看
   --   },
   -- },
 }
