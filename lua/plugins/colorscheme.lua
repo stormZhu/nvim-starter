@@ -1,7 +1,7 @@
 return {
   {
     "tanvirtin/monokai.nvim",
-    lazy = false,
+    -- lazy = false,
     -- config = function()
     --   local palette = require("monokai").pro
     --   palette.white = "#C3C0C0"
@@ -36,12 +36,20 @@ return {
   },
   {
     "projekt0n/github-nvim-theme",
-    lazy = false, -- make sure we load this during startup if it is your main colorscheme
-    priority = 1000, -- make sure to load this before all the other start plugins
+    -- lazy = false, -- make sure we load this during startup if it is your main colorscheme
+    -- priority = 1000, -- make sure to load this before all the other start plugins
+    -- config = function()
+    --   require("github-theme").setup({})
+    --
+    --   vim.cmd("colorscheme github_dark_dimmed")
+    -- end,
+  },
+  {
+    "askfiy/visual_studio_code",
+    lazy = false,
+    priority = 100,
     config = function()
-      require("github-theme").setup({})
-
-      vim.cmd("colorscheme github_dark_dimmed")
+      vim.cmd([[colorscheme visual_studio_code]])
     end,
   },
   -- {
