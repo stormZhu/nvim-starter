@@ -6,7 +6,16 @@ return {
     lazy = false,
     config = function()
       local palette = require("monokai").pro
-      -- palette.aqua = "#66d9ef" -- 修改一下pro的蓝色
+      palette.white = '#C3C0C0'
+      palette.grey = '#72696A'
+      palette.black = "#000000"
+      palette.pink = '#D06A86'
+      palette.green = '#77C269'
+      palette.aqua = '#6CB5CC'
+      palette.yellow = '#E4C15A'
+      palette.orange = '#FC9867'
+      palette.purple = '#AB9DF2'
+      palette.red = '#D15454'
       require("monokai").setup({
         palette = palette,
         custom_hlgroups = {
