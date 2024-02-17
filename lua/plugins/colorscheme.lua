@@ -34,28 +34,44 @@ return {
     --   })
     -- end,
   },
+  { "Mofiqul/vscode.nvim" },
   {
-    "projekt0n/github-nvim-theme",
-    -- lazy = false, -- make sure we load this during startup if it is your main colorscheme
-    -- priority = 1000, -- make sure to load this before all the other start plugins
-    -- config = function()
-    --   require("github-theme").setup({})
-    --
-    --   vim.cmd("colorscheme github_dark_dimmed")
-    -- end,
-  },
-  { "Mofiqul/vscode.nvim", lazy = false, priority = 1000, },
-  {
-    "askfiy/visual_studio_code",
-    -- priority = 100,
-    -- config = function()
-    --   vim.cmd([[colorscheme visual_studio_code]])
-    -- end,
+    "Mofiqul/dracula.nvim",
+    lazy = false, 
+    priority = 1000,
+    opts = {
+      colors = {
+        bg = "#282A36",
+        fg = "#F8F8F2",
+        selection = "#44475A",
+        comment = "#6272A4",
+        red = "#FF5555",
+        orange = "#EAAA66",
+        yellow = "#F1FA8C",
+        green = "#79CF8E",
+        purple = "#B690ED",
+        cyan = "#83DAED",
+        pink = "#FF79C6",
+        bright_red = "#FF6E6E",
+        bright_green = "#69FF94",
+        bright_yellow = "#FFFFA5",
+        bright_blue = "#D6ACFF",
+        bright_magenta = "#FF92DF",
+        bright_cyan = "#A4FFFF",
+        bright_white = "#FFFFFF",
+        menu = "#21222C",
+        visual = "#3E4452",
+        gutter_fg = "#4B5263",
+        nontext = "#3B4048",
+        white = "#ABB2BF",
+        black = "#191A21",
+      },
+    },
   },
   {
     "LazyVim/LazyVim",
     opts = {
-      colorscheme = "vscode",
+      colorscheme = "dracula",
     },
   },
 }
