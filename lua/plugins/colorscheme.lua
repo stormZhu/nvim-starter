@@ -1,7 +1,7 @@
 return {
   {
     "tanvirtin/monokai.nvim",
-    -- lazy = false,
+    lazy = true,
     -- config = function()
     --   local palette = require("monokai").pro
     --   palette.white = "#C3C0C0"
@@ -34,44 +34,47 @@ return {
     --   })
     -- end,
   },
-  { "Mofiqul/vscode.nvim" },
+  { "Mofiqul/vscode.nvim", lazy = true },
   {
     "Mofiqul/dracula.nvim",
-    lazy = false, 
+    lazy = false,
     priority = 1000,
     opts = {
       colors = {
-        bg = "#282A36",
-        fg = "#F8F8F2",
-        selection = "#44475A",
-        comment = "#6272A4",
-        red = "#FF5555",
-        orange = "#EAAA66",
-        yellow = "#F1FA8C",
-        green = "#79CF8E",
-        purple = "#B690ED",
-        cyan = "#83DAED",
-        pink = "#FF79C6",
-        bright_red = "#FF6E6E",
-        bright_green = "#69FF94",
-        bright_yellow = "#FFFFA5",
-        bright_blue = "#D6ACFF",
-        bright_magenta = "#FF92DF",
-        bright_cyan = "#A4FFFF",
-        bright_white = "#FFFFFF",
+        bg = "#292A35", --
+        fg = "#E7E7E0", -- 白色字体
+        selection = "#3A404D",
+        comment = "#70747f",
+        orange = "#FDC38E",
+        -- ANSI
+        black = "#1C1C1C", -- ANSI 0
+        red = "#DD6E6B",
+        green = "#ADDD9A",
+        yellow = "#E8EDA2",
+        purple = "#BAA0E8", -- used as ANSI 4 (blue)
+        pink = "#E48CC1",
+        cyan = "#A7DFEF",
+        white = "#F6F6F5", -- ANSI 7, 'selection' used for ANSI 8
+        -- indexes 9-15
+        bright_red = "#E1837F",
+        bright_green = "#97EDA2",
+        bright_yellow = "#F6F6B6",
+        bright_blue = "#D0B5F3",
+        bright_magenta = "#E7A1D7",
+        bright_cyan = "#BCF4F5",
+        bright_white = "#FFFFFF", -- index 15
+
         menu = "#21222C",
-        visual = "#3E4452",
+        visual = "#505663",
         gutter_fg = "#4B5263",
         nontext = "#3B4048",
-        white = "#ABB2BF",
-        black = "#191A21",
       },
     },
   },
   {
     "LazyVim/LazyVim",
     opts = {
-      colorscheme = "dracula",
+      colorscheme = "dracula-soft",
     },
   },
 }
