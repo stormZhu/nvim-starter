@@ -85,13 +85,15 @@ return {
   },
   {
     "catppuccin/nvim",
+    name = "catppuccin", 
+    priority = 1000,
   },
   "morhetz/gruvbox",
   "junegunn/seoul256.vim",
   {
     "LazyVim/LazyVim",
     opts = {
-      colorscheme = "everforest",
+      colorscheme = "catppuccin",
     },
   },
 }
