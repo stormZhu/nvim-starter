@@ -84,6 +84,11 @@ return {
     end,
   },
   {
+    "catppuccin/nvim",
+  },
+  "morhetz/gruvbox",
+  "junegunn/seoul256.vim",
+  {
     "LazyVim/LazyVim",
     opts = {
       colorscheme = "everforest",
