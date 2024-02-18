@@ -37,8 +37,8 @@ return {
   { "Mofiqul/vscode.nvim", lazy = true },
   {
     "Mofiqul/dracula.nvim",
-    lazy = false,
-    priority = 1000,
+    lazy = true,
+    -- priority = 1000,
     opts = {
       colors = {
         bg = "#292A35", --
@@ -72,9 +72,14 @@ return {
     },
   },
   {
+    "folke/tokyonight.nvim",
+    lazy = false,
+    opts = { style = "storm", transparent = false },
+  },
+  {
     "LazyVim/LazyVim",
     opts = {
-      colorscheme = "dracula-soft",
+      colorscheme = "tokyonight",
     },
   },
 }
