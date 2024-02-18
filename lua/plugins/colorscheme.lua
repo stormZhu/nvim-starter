@@ -72,14 +72,12 @@ return {
     },
   },
   {
-    "folke/tokyonight.nvim",
-    lazy = false,
-    opts = { style = "storm", transparent = false },
+    "mhartington/oceanic-next",
   },
   {
     "LazyVim/LazyVim",
     opts = {
-      colorscheme = "tokyonight",
+      colorscheme = "OceanicNext",
     },
   },
 }
