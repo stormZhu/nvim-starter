@@ -90,6 +90,7 @@ return {
   },
   "morhetz/gruvbox",
   "junegunn/seoul256.vim",
+  "NLKNguyen/papercolor-theme",
   {
     "LazyVim/LazyVim",
     opts = {
