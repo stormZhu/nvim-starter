@@ -12,6 +12,7 @@ return {
           sh = { "shfmt" },
           cpp = { "clang_format" },
           c = { "clang_format" },
+          proto = { "buf" },
         },
       }
       return opts
