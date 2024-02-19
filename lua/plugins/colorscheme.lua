@@ -85,7 +85,7 @@ return {
   },
   {
     "catppuccin/nvim",
-    name = "catppuccin",
+    -- name = "catppuccin",
     -- priority = 1000,
   },
   "morhetz/gruvbox",
@@ -93,7 +93,7 @@ return {
   "projekt0n/github-nvim-theme",
   "nlknguyen/papercolor-theme",
   "chiendo97/intellij.vim",
-  "savq/melange-nvim"
+  "savq/melange-nvim",
   {
     "LazyVim/LazyVim",
     opts = {
