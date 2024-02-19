@@ -91,6 +91,7 @@ return {
   "morhetz/gruvbox",
   "junegunn/seoul256.vim",
   "NLKNguyen/papercolor-theme",
+  "projekt0n/github-nvim-theme",
   {
     "LazyVim/LazyVim",
     opts = {
