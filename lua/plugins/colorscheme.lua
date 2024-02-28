@@ -1,7 +1,6 @@
 return {
   {
     "tanvirtin/monokai.nvim",
-    lazy = true,
     config = function()
       local palette = require("monokai").pro
       palette.white = "#C3C0C0"
@@ -34,10 +33,9 @@ return {
       })
     end,
   },
-  { "Mofiqul/vscode.nvim", lazy = true },
+  { "Mofiqul/vscode.nvim" },
   {
     "Mofiqul/dracula.nvim",
-    lazy = true,
     -- priority = 1000,
     opts = {
       colors = {
@@ -97,7 +95,7 @@ return {
   {
     "LazyVim/LazyVim",
     opts = {
-      colorscheme = "melange",
+      colorscheme = "github_dark",
     },
   },
 }
