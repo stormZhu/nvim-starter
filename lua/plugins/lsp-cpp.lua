@@ -3,6 +3,21 @@ return {
   {
     "neovim/nvim-lspconfig",
     opts = {
+      -- options for vim.diagnostic.config()
+      diagnostics = {
+        underline = true,
+        update_in_insert = false,
+        virtual_text = false,   -- 展示太多了，太乱了，先不展示了
+        severity_sort = true,
+        signs = {
+          text = {
+            [vim.diagnostic.severity.ERROR] = require("lazyvim.config").icons.diagnostics.Error,
+            [vim.diagnostic.severity.WARN] = require("lazyvim.config").icons.diagnostics.Warn,
+            [vim.diagnostic.severity.HINT] = require("lazyvim.config").icons.diagnostics.Hint,
+            [vim.diagnostic.severity.INFO] = require("lazyvim.config").icons.diagnostics.Info,
+          },
+        },
+      },
       servers = {
         -- Ensure mason installs the server
         clangd = {
