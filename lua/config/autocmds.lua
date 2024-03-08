@@ -9,3 +9,5 @@ local function copy_file_line_num()
 end
 
 vim.api.nvim_create_user_command("CFL", copy_file_line_num, {})
+
+vim.cmd [[ autocmd BufRead,BufNewFile *.ic setfiletype cpp ]]
