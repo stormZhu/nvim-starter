@@ -74,10 +74,10 @@ return {
   {
     "catppuccin/nvim",
     opt = {
-      flavour = "frappe", -- latte, frappe, macchiato, mocha
+      flavour = "macchiato", -- latte, frappe, macchiato, mocha
       background = { -- :h background
         light = "latte",
-        dark = "frappe",
+        dark = "macchiato",
       },
       treesitter_context = false,
     },
@@ -85,7 +85,7 @@ return {
   {
     "LazyVim/LazyVim",
     opts = {
-      colorscheme = "catppuccin",
+      colorscheme = "catppuccin-macchiato",
     },
   },
 }
