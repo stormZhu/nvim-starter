@@ -45,7 +45,6 @@ return {
       })
     end,
   },
-  "catppuccin/nvim",
   "morhetz/gruvbox",
   "junegunn/seoul256.vim",
   "projekt0n/github-nvim-theme",
@@ -54,7 +53,7 @@ return {
   "savq/melange-nvim",
   {
     "Mofiqul/vscode.nvim",
-    priority = 1000,
+    -- priority = 1000,
     config = function()
       local c = require("vscode.colors").get_colors()
       require("vscode").setup({
@@ -69,13 +68,24 @@ return {
           CursorLine = { bg = "#162E44" },
         },
       })
-      require("vscode").load()
+      -- require("vscode").load()
     end,
+  },
+  {
+    "catppuccin/nvim",
+    opt = {
+      flavour = "frappe", -- latte, frappe, macchiato, mocha
+      background = { -- :h background
+        light = "latte",
+        dark = "frappe",
+      },
+      treesitter_context = false,
+    },
   },
   {
     "LazyVim/LazyVim",
     opts = {
-      colorscheme = "vscode",
+      colorscheme = "catppuccin",
     },
   },
 }
