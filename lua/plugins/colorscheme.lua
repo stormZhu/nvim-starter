@@ -34,7 +34,6 @@ return {
     -- end,
   },
   { "mhartington/oceanic-next" },
-  { "lewis6991/github_dark.nvim" },
   {
     "neanias/everforest-nvim",
     config = function()
@@ -45,8 +44,6 @@ return {
       })
     end,
   },
-  "morhetz/gruvbox",
-  "junegunn/seoul256.vim",
   "projekt0n/github-nvim-theme",
   "nlknguyen/papercolor-theme",
   "chiendo97/intellij.vim",
@@ -83,9 +80,15 @@ return {
     },
   },
   {
+    "rmehri01/onenord.nvim",
+  },
+  {
+    "navarasu/onedark.nvim",
+  },
+  {
     "LazyVim/LazyVim",
     opts = {
-      colorscheme = "catppuccin-macchiato",
+      colorscheme = "onedark",
     },
   },
 }
