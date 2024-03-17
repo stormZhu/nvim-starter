@@ -86,6 +86,7 @@ return {
     "navarasu/onedark.nvim",
     config = function()
       require("onedark").setup({
+        style = "warmer",
         colors = {},
         highlights = {
           Visual = { bg = "#2b4e67" },
