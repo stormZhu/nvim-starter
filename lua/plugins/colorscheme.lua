@@ -84,6 +84,15 @@ return {
   },
   {
     "navarasu/onedark.nvim",
+    config = function()
+      require("onedark").setup({
+        colors = {},
+        highlights = {
+          Visual = { bg = "#2b4e67" },
+          CursorLine = { bg = "#3b3f4c" },
+        },
+      })
+    end,
   },
   {
     "LazyVim/LazyVim",
