@@ -11,3 +11,7 @@ Refer to the [documentation](https://lazyvim.github.io/installation) to get star
   
 ## git
 - 待增加diffview插件
+
+
+## 问题
+不知道为什么LazyVim将vim.o.clipboard = "unnamedplus" 加了一个if条件？
