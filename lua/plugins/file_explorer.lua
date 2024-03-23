@@ -43,14 +43,6 @@ return {
           indent_markers = {
             enable = true,
           },
-          -- icons = {
-          --   glyphs = {
-          --     folder = {
-          --       arrow_closed = "", -- arrow when folder is closed
-          --       arrow_open = "", -- arrow when folder is open
-          --     },
-          --   },
-          -- },
           icons = {
             glyphs = {
               default = "",
