@@ -15,3 +15,4 @@ Refer to the [documentation](https://lazyvim.github.io/installation) to get star
 
 ## 问题
 不知道为什么LazyVim将vim.o.clipboard = "unnamedplus" 加了一个if条件？
+vim-interestingwords 插件导致 / 搜索的时候不高亮了，所以优先使用 <leader>k 更方便
