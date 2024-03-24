@@ -51,7 +51,8 @@ return {
       elseif t == "bashdb" then
         cmd = ":GdbStartBashDB bashdb " .. exec_file
       end
-      vim.api.nvim_command("Neotree close")  -- 关闭目录树
+      -- vim.api.nvim_command("Neotree close")  -- 关闭目录树
+      vim.api.nvim_command("NvimTreeClose")  -- for nvim-tree
       vim.api.nvim_command(cmd)
     end
     
