@@ -22,9 +22,37 @@ return {
   },
   { "sainnhe/sonokai" },
   {
+    "catppuccin/nvim",
+    name = "catppuccin",
+    opts = {
+      flavour = "macchiato", -- latte, frappe, macchiato, mocha
+      background = { -- :h background
+        light = "latte",
+        dark = "macchiato",
+      },
+      transparent_background = false,
+      color_overrides = {
+        all = {},
+        latte = {},
+        frappe = {
+          yellow = "#dbc074",
+        },
+        macchiato = {},
+        mocha = {},
+      },
+      highlight_overrides = {
+        macchiato = function(macchiato)
+          return {
+            Visual = { bg = "#264F78", style = { "bold" } },
+          }
+        end,
+      },
+    },
+  },
+  {
     "LazyVim/LazyVim",
     opts = {
-      colorscheme = "tokyonight",
+      colorscheme = "catppuccin",
     },
   },
 }
