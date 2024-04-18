@@ -18,6 +18,9 @@ return {
           },
         },
       },
+      inlay_hints = {
+        enabled = true,
+      },
       servers = {
         -- Ensure mason installs the server
         clangd = {
