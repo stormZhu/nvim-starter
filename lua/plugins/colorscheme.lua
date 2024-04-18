@@ -10,18 +10,29 @@ return {
     config = function()
       local util = require("tokyonight.util")
       require("tokyonight").setup({
-        style = "moon",
+        style = "storm",
         light_style = "day",
         transparent = false,
         day_brightness = 0.2,
         on_colors = function(colors)
-          colors.green = "#a6da95"
           colors.fg = "#b8c0e0"
+          colors.terminal_black = "#6e738d" -- 未使用的变量 --util.darken(colors.terminal_black, 1)
+
+          -- colors.cyan = colors.red
+          colors.blue1 = "#c6a0f6"  -- catppuccin mauve
+          -- colors.blue2 = colors.red
+          -- colors.blue5 = colors.red
+
+          colors.green = "#a6da95"
+          colors.green2 = "#a6da95"
+          colors.green1 = "#8bd5ca" -- catppuccin macchiato teal
+
           -- colors.dark3 = colors.red
           -- colors.bg_highlight = colors.red
-          colors.terminal_black = "#6e738d" -- 未使用的变量 --util.darken(colors.terminal_black, 1)
           colors.orange = "#f5a97f" -- catppuccin macchiato peach
-          colors.green1 = "#8bd5ca" -- catppuccin macchiato teal
+          -- colors.red = "#ff757f"
+          -- colors.red1 = "#c53b53" --
+          colors.purple = "#fca7ea"
         end,
         on_highlights = function(hl, c)
           -- hl.TroubleText = { fg = c.red }
