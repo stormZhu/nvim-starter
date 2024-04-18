@@ -1,8 +1,13 @@
 return {
-    "nvimdev/lspsaga.nvim",
-    dependencies = {
-        'nvim-treesitter/nvim-treesitter', 
-        'nvim-tree/nvim-web-devicons',
+  "nvimdev/lspsaga.nvim",
+  -- enabled = false,
+  dependencies = {
+    "nvim-treesitter/nvim-treesitter",
+    "nvim-tree/nvim-web-devicons",
+  },
+  opts = {
+    lightbulb = {
+      sign = false,
     },
-    opts = {},
+  },
 }
