@@ -1,25 +1,19 @@
 return {
-  "chlliendo97/intellij.vim",
   {
     "rmehri01/onenord.nvim",
   },
-  {
-    "navarasu/onedark.nvim",
-    config = function()
-      require("onedark").setup({
-        style = "warmer",
-        transparent = false, -- Show/hide background
-        colors = {},
-        highlights = {
-          Visual = { bg = "#2b4e67" },
-          CursorLine = { bg = "#3b3f4c" },
-        },
-      })
-    end,
-  },
   { "sainnhe/sonokai" },
   "projekt0n/github-nvim-theme",
-  { "folke/tokyonight.nvim", lazy = false },
+  {
+    "folke/tokyonight.nvim",
+    lazy = false,
+    opts = {
+      style = "moon",
+      light_style = "day",
+      transparent = false,
+      day_brightness = 0.2,
+    },
+  },
   {
     "catppuccin/nvim",
     name = "catppuccin",
@@ -67,6 +61,7 @@ return {
             base03 = "#282A36",
             base04 = "#262626",
             green = "#a6da95",
+            green = "#9cda95",
             cyan = "#8aadf4", -- 蓝色
             yellow = "#eed49f", -- catppuccin yellow
             orange = "#f5a97f", -- catppuccin peach
@@ -86,7 +81,7 @@ return {
   {
     "LazyVim/LazyVim",
     opts = {
-      colorscheme = "catppuccin",
+      colorscheme = "tokyonight",
     },
   },
 }
