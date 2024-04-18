@@ -86,7 +86,7 @@ return {
   {
     "LazyVim/LazyVim",
     opts = {
-      colorscheme = "dracula-soft",
+      colorscheme = "catppuccin",
     },
   },
 }
