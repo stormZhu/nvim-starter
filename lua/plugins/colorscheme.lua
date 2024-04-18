@@ -7,12 +7,27 @@ return {
   {
     "folke/tokyonight.nvim",
     lazy = false,
-    opts = {
-      style = "moon",
-      light_style = "day",
-      transparent = false,
-      day_brightness = 0.2,
-    },
+    config = function()
+      local util = require("tokyonight.util")
+      require("tokyonight").setup({
+        style = "moon",
+        light_style = "day",
+        transparent = false,
+        day_brightness = 0.2,
+        on_colors = function(colors)
+          colors.green = "#a6da95"
+          colors.fg = "#b8c0e0"
+          -- colors.dark3 = colors.red
+          -- colors.bg_highlight = colors.red
+          colors.terminal_black = "#6e738d" -- 未使用的变量 --util.darken(colors.terminal_black, 1)
+          colors.orange = "#f5a97f" -- catppuccin macchiato peach
+          colors.green1 = "#8bd5ca" -- catppuccin macchiato teal
+        end,
+        on_highlights = function(hl, c)
+          -- hl.TroubleText = { fg = c.red }
+        end,
+      })
+    end,
   },
   {
     "catppuccin/nvim",
@@ -61,7 +76,6 @@ return {
             base03 = "#282A36",
             base04 = "#262626",
             green = "#a6da95",
-            green = "#9cda95",
             cyan = "#8aadf4", -- 蓝色
             yellow = "#eed49f", -- catppuccin yellow
             orange = "#f5a97f", -- catppuccin peach
