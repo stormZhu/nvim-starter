@@ -61,7 +61,7 @@ return {
           dayfox = {},
           nordfox = {
             white = "#b8c0e0",
-            sel0 = "#264F78", -- Popup bg, visual selection bg
+            -- sel0 = "#506796", -- Popup bg, visual selection bg
             -- fg0 = "#b8c0e0", -- Lighter fg
             fg1 = "#b8c0e0", -- Default fg
           },
@@ -73,13 +73,17 @@ return {
             },
             git = {},
           },
-          nightfox = {
-            -- syntax = {
-            --   type = "#c6a0f6",
-            -- },
+          nightfox = {},
+        },
+        groups = {
+          nordfox = {
+            -- As with specs and palettes, a specific style's value will be used over the `all`'s value.
+            Visual = { bg = "#225fa1" },
+            LspReferenceText = { bg = "#506796" },
+            LspReferenceRead = { bg = "#506796" },
+            LspReferenceWrite = { bg = "#506796" },
           },
         },
-        groups = {},
       })
     end,
   },
