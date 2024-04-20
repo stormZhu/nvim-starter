@@ -46,12 +46,7 @@ return {
           },
         },
         palettes = { -- Everything defined under `all` will be applied to each style.
-          all = {
-            white = "#b8c0e0",
-            sel0 = "#264F78", -- Popup bg, visual selection bg
-            -- fg0 = "#b8c0e0", -- Lighter fg
-            fg1 = "#b8c0e0", -- Default fg
-          },
+          all = {},
           nightfox = {
             -- A specific style's value will be used over the `all`'s value
             red = "#ed8796",
@@ -64,7 +59,12 @@ return {
             fg1 = "#b8c0e0", -- Default fg
           },
           dayfox = {},
-          nordfox = {},
+          nordfox = {
+            white = "#b8c0e0",
+            sel0 = "#264F78", -- Popup bg, visual selection bg
+            -- fg0 = "#b8c0e0", -- Lighter fg
+            fg1 = "#b8c0e0", -- Default fg
+          },
         },
         specs = { -- As with palettes, the values defined under `all` will be applied to every style.
           all = {
