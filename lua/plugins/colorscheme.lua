@@ -68,7 +68,7 @@ return {
               -- -- start with `#` the string will be used as the path of the palette table. Defining just
               -- -- a color uses the base version of that color.
               -- keyword = "magenta",
-              --
+              builtin0 = "blue",  -- rust成员函数
               -- -- Adding either `.bright` or `.dim` will change the value
               -- conditional = "magenta.bright",
               -- number = "orange.dim",
