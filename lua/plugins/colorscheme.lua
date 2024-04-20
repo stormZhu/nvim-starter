@@ -12,7 +12,7 @@ return {
           -- Compiled file's destination location
           -- compile_path = vim.fn.stdpath("cache") .. "/nightfox",
           -- compile_file_suffix = "_compiled", -- Compiled file suffix
-          transparent = false, -- Disable setting background
+          transparent = true, -- Disable setting background
           terminal_colors = true, -- Set terminal colors (vim.g.terminal_color_*) used in `:terminal`
           dim_inactive = false, -- Non focused panes set to alternative background
           module_default = true, -- Default enable value for modules
@@ -46,7 +46,12 @@ return {
           },
         },
         palettes = { -- Everything defined under `all` will be applied to each style.
-          all = {},
+          all = {
+            white = "#b8c0e0",
+            sel0 = "#264F78", -- Popup bg, visual selection bg
+            -- fg0 = "#b8c0e0", -- Lighter fg
+            fg1 = "#b8c0e0", -- Default fg
+          },
           nightfox = {
             -- A specific style's value will be used over the `all`'s value
             red = "#ed8796",
@@ -64,24 +69,14 @@ return {
         specs = { -- As with palettes, the values defined under `all` will be applied to every style.
           all = {
             syntax = {
-              -- -- Specs allow you to define a value using either a color or template. If the string does
-              -- -- start with `#` the string will be used as the path of the palette table. Defining just
-              -- -- a color uses the base version of that color.
-              -- keyword = "magenta",
-              builtin0 = "blue",  -- rust成员函数
-              -- -- Adding either `.bright` or `.dim` will change the value
-              -- conditional = "magenta.bright",
-              -- number = "orange.dim",
+              builtin0 = "blue",
             },
-            git = {
-              -- A color define can also be used
-              -- changed = "#f4a261",
-            },
+            git = {},
           },
           nightfox = {
-            syntax = {
-              type = "#c6a0f6",
-            },
+            -- syntax = {
+            --   type = "#c6a0f6",
+            -- },
           },
         },
         groups = {},
@@ -191,7 +186,7 @@ return {
   {
     "LazyVim/LazyVim",
     opts = {
-      colorscheme = "nightfox",
+      colorscheme = "nordfox",
     },
   },
 }
