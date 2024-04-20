@@ -5,6 +5,90 @@ return {
   { "sainnhe/sonokai" },
   "projekt0n/github-nvim-theme",
   {
+    "EdenEast/nightfox.nvim",
+    config = function()
+      require("nightfox").setup({
+        options = {
+          -- Compiled file's destination location
+          -- compile_path = vim.fn.stdpath("cache") .. "/nightfox",
+          -- compile_file_suffix = "_compiled", -- Compiled file suffix
+          transparent = false, -- Disable setting background
+          terminal_colors = true, -- Set terminal colors (vim.g.terminal_color_*) used in `:terminal`
+          dim_inactive = false, -- Non focused panes set to alternative background
+          module_default = true, -- Default enable value for modules
+          colorblind = {
+            enable = false, -- Enable colorblind support
+            simulate_only = false, -- Only show simulated colorblind colors and not diff shifted
+            severity = {
+              protan = 0, -- Severity [0,1] for protan (red)
+              deutan = 0, -- Severity [0,1] for deutan (green)
+              tritan = 0, -- Severity [0,1] for tritan (blue)
+            },
+          },
+          styles = { -- Style to be applied to different syntax groups
+            comments = "NONE", -- Value is any valid attr-list value `:help attr-list`
+            conditionals = "NONE",
+            constants = "NONE",
+            functions = "NONE",
+            keywords = "NONE",
+            numbers = "NONE",
+            operators = "NONE",
+            strings = "NONE",
+            types = "NONE",
+            variables = "NONE",
+          },
+          inverse = { -- Inverse highlight for different types
+            match_paren = false,
+            visual = false,
+            search = false,
+          },
+          modules = { -- List of various plugins and additional options
+          },
+        },
+        palettes = { -- Everything defined under `all` will be applied to each style.
+          all = {},
+          nightfox = {
+            -- A specific style's value will be used over the `all`'s value
+            red = "#ed8796",
+            green = { base = "#a3be8c", bright = "#b1d196", dim = "#8aa872" },
+            -- green = "#a6da95",
+            -- yellow = "#91d7e3",
+            white = "#b8c0e0",
+            sel0 = "#264F78", -- Popup bg, visual selection bg
+            -- fg0 = "#b8c0e0", -- Lighter fg
+            fg1 = "#b8c0e0", -- Default fg
+          },
+          dayfox = {},
+          nordfox = {},
+        },
+        specs = { -- As with palettes, the values defined under `all` will be applied to every style.
+          all = {
+            syntax = {
+              -- -- Specs allow you to define a value using either a color or template. If the string does
+              -- -- start with `#` the string will be used as the path of the palette table. Defining just
+              -- -- a color uses the base version of that color.
+              -- keyword = "magenta",
+              --
+              -- -- Adding either `.bright` or `.dim` will change the value
+              -- conditional = "magenta.bright",
+              -- number = "orange.dim",
+            },
+            git = {
+              -- A color define can also be used
+              -- changed = "#f4a261",
+            },
+          },
+          nightfox = {
+            syntax = {
+              type = "#c6a0f6",
+            },
+          },
+        },
+        groups = {},
+      })
+    end,
+  },
+  {
     "folke/tokyonight.nvim",
     lazy = false,
     config = function()
@@ -19,12 +103,13 @@ return {
           colors.terminal_black = "#6e738d" -- 未使用的变量 --util.darken(colors.terminal_black, 1)
 
           -- colors.cyan = colors.red
-          colors.blue1 = "#c6a0f6"  -- catppuccin mauve
+          colors.blue1 = "#81b29a" -- catppuccin mauve
           -- colors.blue2 = colors.red
           -- colors.blue5 = colors.red
 
-          colors.green = "#a6da95"
-          colors.green2 = "#a6da95"
+          colors.green = "#81b29a"
+          colors.green2 = "#c6a0f6"
+          -- colors.green1 = "#81b29a"
           colors.green1 = "#8bd5ca" -- catppuccin macchiato teal
 
           -- colors.dark3 = colors.red
@@ -106,7 +191,7 @@ return {
   {
     "LazyVim/LazyVim",
     opts = {
-      colorscheme = "tokyonight",
+      colorscheme = "nightfox",
     },
   },
 }
