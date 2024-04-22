@@ -13,6 +13,7 @@ return {
           cpp = { "clang_format" },
           c = { "clang_format" },
           proto = { "buf" },
+          rust = { "rustfmt" },
         },
       }
       return opts
