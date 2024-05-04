@@ -63,6 +63,7 @@ return {
             white = "#b8c0e0",
             -- sel0 = "#506796", -- Popup bg, visual selection bg
             -- fg0 = "#b8c0e0", -- Lighter fg
+            yellow = "#e0cda7",  -- #c6b696
             fg1 = "#b8c0e0", -- Default fg
           },
         },
@@ -147,7 +148,7 @@ return {
       highlight_overrides = {
         macchiato = function(macchiato)
           return {
-            Visual = { bg = "#264F78", style = { "bold" } },
+            Visual = { bg = "#304E75", style = { "bold" } },
           }
         end,
       },
@@ -178,7 +179,7 @@ return {
         end,
         on_highlights = function(colors, color)
           return {
-            Visual = { bg = "#264F78", bold = true },
+            Visual = { bg = "#304E75", bold = true },
             IncSearch = { fg = "#181819", bg = colors.green },
             CurSearch = { fg = "#181819", bg = colors.green, bold = true },
             Search = { fg = "#181819", bg = colors.pink, bold = true },
