@@ -78,7 +78,7 @@ return {
         groups = {
           nordfox = {
             -- As with specs and palettes, a specific style's value will be used over the `all`'s value.
-            Visual = { bg = "#225fa1" },
+            Visual = { bg = "#304E75" }, -- #225fa1
             LspReferenceText = { bg = "#506796" },
             LspReferenceRead = { bg = "#506796" },
             LspReferenceWrite = { bg = "#506796" },
