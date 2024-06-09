@@ -4,4 +4,5 @@
 
 -- vim.o.background = "light"
 vim.o.clipboard = "unnamedplus"
+vim.o.wrap = true
 
